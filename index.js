@@ -4,6 +4,8 @@ const geocode=require("./geocode/geocode.js");
 const weather=require("./weather/weather.js");
 const express=require("express");
 
+const port=process.env.port || 3000;
+
 var details={};
 
 const app=express();
@@ -54,7 +56,9 @@ app.get("",function(req,res){
   
 });
 
-app.listen(3000);
+app.listen(port,function(){
+  console.log(`Server opens at ${port}`);
+});
 
 // const argv=yargs
 //            .options({
