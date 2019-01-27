@@ -30,6 +30,7 @@ app.get("",function(req,res){
              details.temparature=result;
              details.longtitude=JSON.stringify(results.longtitude);
              details.latitude=JSON.stringify(results.latitude);
+             details.developer="G2@Works";
              res.send(details);
           }
         });
