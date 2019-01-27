@@ -14,9 +14,9 @@ const app=express();
 
 app.get("",function(req,res){
    
-  if(req.query.q)
-  {
-    geocode.lang_lat(req.query.q).then(
+  // if(req.query.q)
+  // {
+    geocode.lang_lat("Pune").then(
   
       (results)=>{
         weather.report_weather(JSON.stringify(results.latitude),JSON.stringify(results.longtitude),function(errors,result){
@@ -46,15 +46,15 @@ app.get("",function(req,res){
       }
     
     );
-  }
-  else
-  {
-    res.status(404).send({
-      staus:"Parameter q is missing",
-      error:"Send the parameter q with address of location specified"
-    });
+  // }
+  // else
+  // {
+  //   res.status(404).send({
+  //     staus:"Parameter q is missing",
+  //     error:"Send the parameter q with address of location specified"
+  //   });
 
-  }
+  // }
   
 });
 
