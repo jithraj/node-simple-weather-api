@@ -16,7 +16,7 @@ app.get("",function(req,res){
    
   if(req.query.q)
   {
-    geocode.lang_lat("Pune").then(
+    geocode.lang_lat(req.query.q).then(
   
       (results)=>{
         weather.report_weather(JSON.stringify(results.latitude),JSON.stringify(results.longtitude),function(errors,result){
