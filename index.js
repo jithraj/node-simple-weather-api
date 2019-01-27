@@ -14,8 +14,8 @@ const app=express();
 
 app.get("",function(req,res){
    
-  // if(req.query.q)
-  // {
+  if(req.query.q)
+  {
     geocode.lang_lat("Pune").then(
   
       (results)=>{
@@ -46,15 +46,15 @@ app.get("",function(req,res){
       }
     
     );
-  // }
-  // else
-  // {
-  //   res.status(404).send({
-  //     staus:"Parameter q is missing",
-  //     error:"Send the parameter q with address of location specified"
-  //   });
+  }
+  else
+  {
+    res.status(404).send({
+      staus:"Parameter q is missing",
+      error:"Send the parameter q with address of location specified"
+    });
 
-  // }
+  }
   
 });
 
