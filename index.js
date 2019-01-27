@@ -6,7 +6,7 @@ const geocode=require("./geocode/geocode.js");
 const weather=require("./weather/weather.js");
 const express=require("express");
 
-const port=process.env.port || 3000;
+const port=process.env.PORT || 3000;
 
 var details={};
 
