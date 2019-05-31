@@ -30,7 +30,7 @@ app.get("",function(req,res){
              details.temparature=result;
              details.longtitude=JSON.stringify(results.longtitude);
              details.latitude=JSON.stringify(results.latitude);
-             details.developer="Aspire_team";
+             details.developer="Aspire+++team";
              res.send(details);
           }
         });
